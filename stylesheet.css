@@ -80,20 +80,20 @@ body{
     width: 95%;
     background-color: #F5BCE4;
 		border-radius: 5px;
-    margin: 45px auto;
+    /*margin: 45px auto;*/
 		box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
 	}
 
-.item {
+/*.item {
 	margin: auto;
 	color: #000;
 	padding: 15px;
 	margin: 5px;
 	background: #f1b82d;
 	border-radius: 3px;
-}
+}*/
 
-.cards {
+/*.cards {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -111,7 +111,7 @@ body{
     grid-row-gap: 25px; */
 }
 
-.one {
+/*.one {
 grid-area: a;
 align-self: stretch;
 }
@@ -136,24 +136,29 @@ align-self: center;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
+}*/
+
+
+
+nav ul {
+	display: flex;
+	flex-flow:column;
 }
 
-#nav {
-    padding: 0;
-	list-style-type: none;
+nav{
+	background-color: #EC70C7;
 }
 
-#nav li {
+nav li {
     margin: 0;
     padding: 0;
 	border-bottom: 1px solid #ccc;
 	text-decoration: none;
+	list-style-type: none;
 }
 
-#nav a:link, #nav a:visited {
-	display: flex;
+nav a:link, nav a:visited {
     color: #ffffff;
-    background-color: #EC70C7;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
@@ -161,7 +166,7 @@ align-self: center;
     font-family:'Merriweather', serif;
 }
 
-#nav a:hover, a:active {
+nav a:hover, nav a:active {
     background-color: #7a991a;
 }
 
@@ -173,20 +178,65 @@ align-self: center;
     margin-top: 0;
     text-align: right;
 }
-img {
-  display: flex;
-	img
 
+.content{
+	display:flex;
+	flex-flow:column;
+	align-content: center;
 }
 
-@media screen and (min-width:800px) {
-	img {
-		float:left;
-	}
+img{
+	margin:5px;
 }
+
 #footer {
     color: black;
     font-family: "Merriweather", Georgia, "Times New Roman", serif;
     font-size: 0.8em;
     border-top: 1px solid black;
+}
+
+@media screen and (min-width:800px) {
+
+	nav{
+		background-color: #EC70C7;
+	}
+
+	nav ul {
+		display:flex;
+		flex-flow:row;
+		justify-content: space-between;
+	}
+
+	.content{
+		flex-flow:row-reverse;
+	}
+
+	p{
+		margin:10px;
+	}
+
+	.image a {
+		margin-right:250px;
+	}
+}
+
+@media screen and (min-width:1200px){
+	.content{
+		display:grid;
+		grid-template-columns: 200px 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+        "a b b"
+        "c c e"
+        ". d d";
+  }
+
+  .image {
+    grid-area: c;
+  }
+
+  .text {
+    grid-area: d;
+  }
 }
