@@ -75,6 +75,8 @@ body{
 	background-color:#2CE7D2;
 }
 
+
+
 #container{
 		padding: 10px;
     width: 95%;
@@ -170,6 +172,39 @@ nav a:hover, nav a:active {
     background-color: #7a991a;
 }
 
+header {
+	display:flex;
+	flex-flow:row;
+	background-color: #65a8a6;
+	margin:0;
+	padding: 0 10px;
+}
+
+nav ul li{
+	display:block;
+	border-top:1px #79896D solid;
+}
+
+nav a{
+	color:#F8ecc2;
+	display:block;
+	text-decoration: none;
+	padding: 20px 30px;
+}
+
+.menu-trigger{
+	order:1;
+}
+
+header h1{
+	order:2;
+	color:white;
+}
+
+nav ul{
+	display:none;
+}
+
 .caption {
     color: black;
     font-family: Georgia, "Times New Roman", serif;
@@ -196,8 +231,18 @@ img{
     border-top: 1px solid black;
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width:700px) {
+	nav ul{
+		display:flex;
+	}
 
+ .menu-trigger{
+	 display:none
+ }
+
+ nav ul li{
+	 border-top: none;
+ }
 	nav{
 		background-color: #EC70C7;
 	}
